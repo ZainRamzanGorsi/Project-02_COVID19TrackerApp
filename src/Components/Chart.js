@@ -4,11 +4,15 @@ import { fetchDailyData } from "./api";
 import { Line, Bar } from "react-chartjs-2";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    width: "100%",
-    marginTop: 30,
+  // container: {
+  //   width: "80%",
+  //   marginTop: 30,
+  //   display: "flex",
+  //   justifyContent: "center",
+  //   alignContent: "center",
+  //   alignItems: "center",
     
-  },
+  // },
   "& > *": {
     paddingTop: 20,
     margin: theme.spacing(5),
@@ -80,9 +84,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   ) : null;
 
   return (
-    <div
-      className={classes.container}
-    >
+    <div style={{paddingLeft: '10%',width: '80%',justifyContent: 'center', display: 'flex'}} className={classes.container}>
       {country ? barChart : lineChart}
     </div>
   );

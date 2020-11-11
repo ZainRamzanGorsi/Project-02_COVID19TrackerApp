@@ -5,6 +5,7 @@ import NavBar from "./Components/NavBar";
 import Cards from "./Components/Cards";
 import Chart from "./Components/Chart";
 import CountryPicker from "./Components/CountryPicker";
+import Footer from './Components/Footer';
 
 class App extends React.Component {
   state = {
@@ -36,7 +37,8 @@ class App extends React.Component {
         <NavBar />
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
+        <Chart data={data} country={country} /><br/>
+        <Footer />
       </div>
     );
   }

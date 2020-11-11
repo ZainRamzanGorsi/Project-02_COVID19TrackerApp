@@ -12,7 +12,7 @@ function CountryPicker({ handleCountryChange }) {
     fetchAPI();
   }, [setFetchedCountries]);
   return (
-    <FormControl style={{marginTop: '30px', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
+    <FormControl style={{margin: '30px auto', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
       <NativeSelect
         defaultValue=""
         onChange={(e) => handleCountryChange(e.target.value)}
